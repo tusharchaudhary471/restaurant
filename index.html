@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Londrina+Shadow' rel='stylesheet' type='text/css'>
+<style>
+body {
+  font-family: helvetica, sans-serif;
+  margin: 0 auto;
+  max-width: 600px;
+  background: url("https://wallpapercave.com/wp/wp1874170.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+div {
+  height: 200px;
+  background-size: cover;
+  position: relative;
+  margin: 40px 0 0 0;
+  border-radius: 12px;
+}
+h1 {
+  font-family: 'Londrina Shadow', cursive;
+  text-align: center;
+  font-size: 75px;
+  color: #aaaaaa;
+  margin: 100px 0 0 0;
+}
+h2 {
+  text-align: center;
+  color: #bbbbbb;
+  margin: 10px 0 70px 0;
+}
+p {
+  color: rgba(255,255,255,1);
+  background: black;
+  background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  padding: 10px;
+  line-height: 28px;
+  font-size: 16px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  height:30px;
+  transition: height .5s;
+  -webkit-transition: height 1s;
+  -moz-transition:height 1s;
+}
+
+.first{
+  background-image: url("http://greaterjammu.com/wp-content/uploads/2019/01/Chole-Bhature.jpg");
+}
+.second{
+  background-image: url("https://i.ytimg.com/vi/CCab5oh0ZOc/maxresdefault.jpg");
+}
+.dessert{
+  background-image: url("https://www.indoindians.com/wp-content/uploads/2016/08/Hyderabadi-Chicken-Biryani-by-Shabana-Akbany.png");
+}
+.price {
+  float: right;
+}
+small{
+  opacity:0;
+  }
+.show-description p{
+  height:100px;
+  }
+.show-description small{
+  opacity:1;
+  }  
+@media(max-width:500px){
+  h1{
+    font-size:50px;
+    margin-top:60px;
+    line-height:40px;
+    }
+  h2{
+    font-size:20px;
+    margin:20px 0 30px 0;
+    }  
+  div{
+    margin:20px 12px 0 12px;
+    }  
+  p{
+    font-size:15px;
+    line-height:15px;
+    }
+  small{
+    font-size:16px;
+    }  
+    }
+</style>
+
+</head>
+
+<body>
+<h1>tushAr's restaurant</h1>
+<h2>For People Who Love to Eat</h2>
+<div class="first show-description">
+  <p>Chole Bhature<span class="price">₹110</span><br />
+  <small>Chhole bhature is a dish from the Punjab region in the northern part of the Indian subcontinent. This Punjabi dish is a combination of chana masala and bhatura, a fried bread made from maida flour. Chhole bhature is often eaten as a breakfast dish, sometimes accompanied with lassi. </small></p>
+</div>
+
+<div class="second show-description">
+  <p>Dosa<span class="price">₹120</span><br />
+  <small>A dosa is a cooked flat thin layered rice batter, originating from the Indian subcontinent, made from a fermented batter. It is somewhat similar to a crepe in appearance. Its main ingredients are rice and black gram ground together in a fine, smooth batter with a dash of salt.</small></p>
+</div>
+  
+<div class="dessert show-description">
+  <p>Chicken biryani<span class="price">₹150</span><br />
+  <small>Biryani, also known as biriyani, biriani, birani or briyani, is a mixed rice dish with its origins among the Muslims of the Indian subcontinent. This dish is especially popular throughout the Indian subcontinent, as well as among the diaspora from the region.</small></p>
+</div>
+<script>
+$('div').on("click",function(){
+  $(this).toggleClass("show-description");
+  });
+</script>
+
+</body>
